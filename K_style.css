@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+header {
+  position: fixed;
+  color: white;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  padding: 10px;
+}
+header button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: white;
+}
+header h1 button {
+  font-size: 2rem;
+  font-weight: bold;
+}
+header nav ul li button {
+  font-size: 1.2rem;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(rgba(0, 28, 72), rgba(0, 103, 172)),
+    url('images/me.jpg') center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main h4 {
+  font-size: 2rem;
+}
+main h2 {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  letter-spacing: 3px;
+  font-family: 'Varela Round', sans-serif;
+}
+main p {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.25rem;
+}
+main button.download {
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 20px;
+  padding: 1rem 2rem;
+  margin-top: 3rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+main button.mouse {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: upDown 1s ease-in-out infinite;
+  cursor: pointer;
+}
+@keyframes upDown {
+  0% {
+    bottom: 1rem;
+  }
+  50% {
+    bottom: 1.5rem;
+  }
+  100% {
+    bottom: 1rem;
+  }
+}
+main h2 span::after {
+  content: '';
+  height: 40px;
+  width: 3px;
+  background-color: #fff;
+  display: inline-block;
+  animation: blink 0.7s ease-in-out infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+section {
+  font-family: 'Poppins', sans-serif;
+  padding: 5rem 0;
+}
+section:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+section .title {
+  margin-bottom: 3rem;
+}
+section .title h4 {
+  font-size: 1.35rem;
+  color: rgb(238, 50, 36);
+  position: relative;
+}
+section .title h2 {
+  font-size: 3.5rem;
+}
+section .title p {
+  font-size: 1.15rem;
+}
+section .about-KLEAGUE::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+section .about-KLEAGUE .left {
+  width: 50%;
+  float: left;
+}
+section .about-KLEAGUE .left img {
+  max-width: 100%;
+}
+section .about-KLEAGUE .right {
+  width: 50%;
+  float: left;
+  padding: 0 2rem;
+}
+section .about-KLEAGUE .right h3 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+section .about-KLEAGUE .right h3 strong {
+  color: rgb(238, 50, 36);
+}
+section .about-KLEAGUE .right p {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+}
+section .about-KLEAGUE .right .social a {
+  font-size: 2.5rem;
+  margin-right: 0.2rem;
+}
+
+section .intro-a::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+section .intro-a .do-inner {
+  background-color: #fff;
+  width: 30%;
+  padding: 2rem;
+  float: left;
+  margin-right: 5%;
+  cursor: pointer;
+}
+section .intro-a .do-inner:last-child {
+  margin-right: 0;
+}
+section .intro-a .do-inner .icon i {
+  font-size: 2.5rem;
+  color: rgb(238, 50, 36);
+}
+section .intro-a .do-inner .content h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+section .intro-a .do-inner .content p {
+  font-size: 1.15rem;
+}
+section .intro-a .do-inner:hover {
+  background-color: rgb(157, 10, 15);
+  color: white;
+}
+section .intro-a .do-inner:hover i {
+  color: white;
+}
+
+.bg {
+  background: url('https://interbrand.com/wp-content/uploads/2021/08/8-2048x1153.jpg')
+    center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 650px;
+}
+
+section.club::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+section.club .club-inner {
+  width: 30%;
+  margin-right: 5%;
+  padding: 1rem 1rem 1.5rem 1rem;
+  float: left;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  margin-bottom: 3rem;
+}
+section.club .club-inner:nth-child(3n) {
+  margin-right: 0;
+}
+section.club .club-inner img {
+  width: 100%;
+  display: block;
+}
+section.club .club-inner strong {
+  color: #ff6a6a;
+  margin: 0.5rem 0;
+  display: block;
+}
+section.club .club-inner h3 {
+  font-size: 1.75rem;
+}
+
+@media screen and (max-width: 1140px) {
+  main .container {
+    width: 992px;
+  }
+  section .container {
+    width: 600px;
+  }
+  section .about-KLEAGUE .left {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  section .about-KLEAGUE .right {
+    width: 100%;
+    padding: 0;
+  }
+  section .do-me .do-inner {
+    width: 48%;
+    margin-bottom: 1.5rem;
+    margin-right: 0;
+  }
+  section .do-me .do-inner:nth-child(2n + 1) {
+    margin-right: 4%;
+  }
+  section .club-me .club-inner {
+    width: 48%;
+    margin-right: 0;
+  }
+  section .club-me .club-inner:nth-child(2n + 1) {
+    margin-right: 4%;
+  }
+  section.contact .contact-me .left {
+    width: 100%;
+  }
+  section.contact .contact-me .right {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+  main .container {
+    width: 768px;
+  }
+  section .club-me .club-inner {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+  main .container {
+    width: 576px;
+  }
+  section .container {
+    width: 400px;
+  }
+  section .do-me .do-inner {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+  main .container {
+    width: 400px;
+  }
+  section .container {
+    width: 360px;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 11px;
+  }
+  main .container {
+    width: 100%;
+  }
+  section .container {
+    width: 100%;
+  }
+}
