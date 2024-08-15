@@ -5,86 +5,170 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>K-League</title>
     <link rel="stylesheet" href="K_style.css" />
+    <style>
+       @font-face {
+            font-family: 'KLeagueBasic';
+            src: url('KLeagueBasic-Medium.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+    font-family: 'KLeagueBasic';
+    src: url('KLeagueDynamic-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+        body {
+            font-family: 'KLeagueBasic', sans-serif;
+        }
+
+        
+    </style>
   </head>
   <body>
     <header>
-      <div class="container">
-        <h1>
-          <button data-animation-scroll="true" data-target="#main">
-            K-LEAGUE
-          </button>
-        </h1>
-        <nav>
-          <ul>
-            <li>
-              <button>울산</button>
-            </li>
-            <li>
-              <button>전북</button>
-            </li>
-            <li>
-              <button>서울</button>
-            </li>
-            <li>
-              <button>강원</button>
-            </li>
-            <li>
-              <button>포항</button>
-            </li>
-            <li>
-              <button>김천</button>
-            </li>
-            <li>
-              <button>인천</button>
-            </li>
-            <li>
-              <button>대전</button>
-            </li>
-            <li>
-              <button>대구</button>
-            </li>
-            <li>
-              <button>제주</button>
-            </li>
-            <li>
-              <button>수원fc</button>
-            </li>
-            <li>
-              <button>광주</button>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <div class="container"></div>
     </header>
+    <!-- 사이드 네비게이션 -->
+    <div id="sideNav">
+      <a href="#about">about</a>
+      <a href="#features">Features</a>
+      <a href="#club">History</a>
+      <a href="#stadium">Stadiums</a>
+    </div>
+    <!-- 사이드 네비게이션 끝 -->
     <main id="main">
       <div class="container"></div>
+      <img
+        id="face"
+        src="https://i.namu.wiki/i/6rxUeUqnNh2QnqS7IKx2HXAS7-ykLxJtAxfr7eWFytmfEohBOKnCUoXzjDf5W0nxr-OLdskgPzvBX16Hdj9s2A.svg"
+        alt="k리그ci"
+        width="250"
+      />
+      <table id="clubs_main">
+        <tr>
+          <td>
+            <a href="http://127.0.0.1:5500/K/clubs/%EC%9A%B8%EC%82%B0.html"
+              ><img
+                src="https://i.namu.wiki/i/MjnPJR_w-RQFYUKtubhcCi53UrncMIzuW26nVhvmdbNtmAhPRY1KTrwoVIbVkz_27USOfOc3o_3vDZW0smmXsQ.svg"
+                alt="울산HD"
+                width="28"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/ko/a/ab/%EC%A0%84%EB%B6%81_%ED%98%84%EB%8C%80_%EB%AA%A8%ED%84%B0%EC%8A%A4_%EB%A1%9C%EA%B3%A0.png"
+                alt="전북현대"
+                width="37"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://files.fcseoul.com/multi01/Club/Club/1701993821978.png"
+                alt="FC서울"
+                width="37"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://gangwon-fc.com/resources/images/content/img_emblem_logo.png"
+                alt="강원FC"
+                width="33"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://i.namu.wiki/i/m70Vxo-w52oF3bMayIyDN7PsXxDIMSGhJi8tUl1ldvWCdADMATQeF4kha7b5m-tN3QjntHnmUjkGC3znWOT-5A.svg"
+                alt="제주"
+                width="28"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://www.incheonutd.com/2018/resource/image/common/logo_footer.png"
+                alt="인천"
+                width="25"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://i.namu.wiki/i/hkur7CEkK44_wbgv0A1Fy-EnmwW4c9ZhqYaK8nge647zWOQ67bCNiKHY0qIYQMw1CNPjRgcwnBjbRWAAbVZQjw.svg"
+                alt="포항"
+                width="34"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://upload.wikimedia.org/wikipedia/ko/e/ed/Daejeon_Hana_Citizen_FC.png"
+                alt="대전"
+                width="25"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://i.namu.wiki/i/QAInK7TBps8-7KsiHAVaUDAl7PjK0lfCbN8pXISD0EjITluh4u2qWa65DzdVkIcWs_ir2FHXXQjyCyiO3MAM9Q.svg"
+                alt="김천상무"
+                width="33"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                id="수원_main"
+                src="https://cdn.interfootball.co.kr/news/photo/201603/106504_1.png"
+                alt="수원FC"
+                width="60"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://i.namu.wiki/i/1rW4lxWxKYT9FW71iy0Mgq3PK0oxPs620dAc_NYACpD13d4xQi-xLm1nRTBBEFIdWOyqwwKu-VqreKnrn3GXAw.svg"
+                alt="대구FC"
+                width="35"
+            /></a>
+          </td>
+          <td>
+            <a href=""
+              ><img
+                src="https://i.namu.wiki/i/4eBg10EJK6hQnxI4nF8fcJNw_bA0DPoPTqgppQQuajsu6HSzsA8GmzK_tka2OBNRT5HfbUI1cpVnNpM1GCHKKA.svg"
+                alt="광주FC"
+                width="25"
+            /></a>
+          </td>
+        </tr>
+      </table>
     </main>
     <section id="about" class="about">
       <div class="container">
-        <div class="title">
-          <h4>About K-League</h4>
-          <h2>K-LEAGUE</h2>
-        </div>
         <div class="about-KLEAGUE">
           <div class="left">
             <img
               src="https://www.kleague.com/assets/images/logo/emblem@2x.png"
               alt="k리그"
+              height="300"
             />
           </div>
           <div class="right">
-            <h3>lorem <strong>lorem</strong></h3>
+            <h3>역동과 <strong>감동</strong></h3>
+            <p id="slogan"><strong>Slogan</strong></p>
+            <br />
+            <br />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              veritatis aperiam accusantium.
+              프로축구리그 순위 아시아 1위 - 13년 연속 선정<sub
+                >(IFFHS, 24년 1월 기준)</sub
+              >
             </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
-              praesentium doloremque quos quis est officiis.
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem,
-              omnis quibusdam.
+            <p>AFC 아시아챔피언스리그 최다 우승 리그<sub>(12회)</sub></p>
             </p>
           </div>
         </div>
@@ -93,8 +177,10 @@
     <section id="features" class="intro">
       <div class="container">
         <div class="title">
-          <h4>Features</h4>
-          <h2>Features</h2>
+          <br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2jxs6Xay4Co?si=0U7QrH1uqr0J2vHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         </div>
         <div class="intro-a">
           <div class="do-inner">
@@ -137,12 +223,8 @@
     <section id="club" class="club">
       <div class="container">
         <div class="title">
-          <h4>1위</h4>
-          <img
-            src="https://www.kleague.com/assets/images/emblem/emblem_K35@2x.png"
-            alt="김천"
-          />
-          <h2>김천</h2>
+          <h4>History</h4>
+          <h2>연혁</h2>
         </div>
         <div class="club-me">
           <div class="club-inner">
@@ -172,21 +254,16 @@
         </div>
       </div>
     </section>
-    <section id="club" class="club">
+    <section id="stadium" class="stadium">
       <div class="container">
         <div class="title">
-          <h4>2위</h4>
-          <h2>강원</h2>
+          <h4>현황</h4>
+          <h2>구장</h2>
         </div>
         <div class="club-me">
           <div class="club-inner">
             <strong>양민혁</strong>
-            <img
-              id="양민혁 사진"
-              src="https://kleague-admin-test.s3.ap-northeast-2.amazonaws.com/v1/player/2024/K21/player_20240157.png"
-              alt="양민혁"
-              style="width: 40%; height: auto"
-            />
+
             <h4>abc</h4>
           </div>
           <div class="club-inner">
@@ -226,6 +303,15 @@
       </div>
     </footer>
     <style>
+      #slogan {
+        position: absolute;
+        margin-top: -40px;
+        margin-left: -75px;
+        color: rgb(232, 232, 232);
+        font-size: 50px;
+        z-index: -1;
+        font-weight: 999;
+      }
       footer {
         background: #333;
         color: #fff;
@@ -254,23 +340,133 @@
       #scrollTopBtn:hover {
         background: #777;
       }
+
+      /* 사이드 네비게이션 스타일 */
+      #sideNav {
+        position: fixed;
+        top: 40%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 200px;
+        background-color: #333;
+        color: #fff;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        transition: width 0.3s ease, transform 0.3s ease;
+        z-index: 2000;
+        border-radius: 0 20px 20px 0;
+      }
+      #sideNav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 10px 0;
+        text-align: center;
+        font-size: 15px;
+        margin-right: 10px;
+        opacity: 0;
+      }
+      #sideNav a:hover {
+        color: #ccc;
+      }
+      #sideNav:hover {
+        width: 100px; /* 마우스가 올라갔을 때 너비를 100%로 설정 */
+      }
+      /* sideNav에 마우스가 올라갔을 때 링크를 보이게  */
+      #sideNav:hover a {
+        opacity: 1;
+      }
+      /* 사이드 네비게이션 스타일 끝 */
+      /* 비디오 스타일 */
+      .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 비율 유지 */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
     </style>
     <script>
-      window.onscroll = function () {
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        if (
-          document.body.scrollTop > 2000 ||
-          document.documentElement.scrollTop > 2000
-        ) {
-          scrollTopBtn.style.display = 'block';
-        } else {
-          scrollTopBtn.style.display = 'none';
-        }
-      };
+      
+    window.onscroll = function () {
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const sideNav = document.getElementById('sideNav');
+    const main = document.getElementById('main');
+
+    // 현재 스크롤 위치
+    const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+    // 화면의 아래쪽 위치 (뷰포트의 높이 + 스크롤 위치)
+    const viewportBottom = scrollPosition + window.innerHeight;
+
+    // main 섹션의 끝 위치
+    const mainBottom = main.offsetHeight;
+
+    if (viewportBottom >= mainBottom) {
+        // 화면의 아래쪽이 main 섹션을 벗어난 이후
+        scrollTopBtn.style.display = 'block';
+        sideNav.style.display = 'flex';
+        sideNav.style.transform = 'translateX(0)';
+        sideNav.style.pointerEvents = 'auto'; // Nav가 작동하도록 설정
+    } else {
+        // 화면의 아래쪽이 main 섹션에 있을 때
+        scrollTopBtn.style.display = 'none';
+        sideNav.style.transform = 'translateX(-100%)';
+        sideNav.style.pointerEvents = 'none'; // Nav가 작동하지 않도록 설정
+    }
+};
+
 
       document.getElementById('scrollTopBtn').onclick = function () {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       };
+
+      document.querySelectorAll('nav img').forEach((img) => {
+        img.addEventListener('mouseover', function () {
+          this.style.transform = 'translateY(4px)'; // 아래로 4px 이동
+        });
+        img.addEventListener('mouseout', function () {
+          this.style.transform = 'translateY(0)'; // 원래 위치로 이동
+        });
+      });
+
+      // 메인 클럽 효과
+      document.querySelectorAll('#clubs_main img').forEach((img) => {
+        img.addEventListener('mouseover', () => {
+          img.style.transform = 'translateY(3px)';
+        });
+        img.addEventListener('mouseout', () => {
+          img.style.transform = 'translateY(0)';
+        });
+      });
+
+// sidenav 스크롤 애니메이션
+  document.querySelectorAll('#sideNav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        targetElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+// 스크롤 애니 끝
+
     </script>
   </body>
 </html>
