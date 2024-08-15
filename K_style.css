@@ -3,6 +3,61 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* 전체 페이지 설정 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 수직 정렬을 상단으로 설정 */
+  height: 100vh;
+  text-align: center;
+}
+
+#face {
+  position: relative;
+  top: -20vh; /* 필요한 만큼 값을 조정하여 위로 이동 */
+  margin-bottom: 3vh;
+}
+
+#clubs_main {
+  position: relative;
+  top: -10vh; /* 필요한 만큼 값을 조정하여 위로 이동 */
+  margin-top: 0;
+  text-align: center;
+}
+
+/* 섹션 스타일 */
+section {
+  min-height: 100vh; /* 각 섹션의 최소 높이를 화면 높이로 설정 */
+  width: 100%; /* 각 섹션이 화면의 100% 너비를 차지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+#clubs_main td {
+  padding: 0 15px; /* 각 항목 사이의 여유 공간 */
+  text-align: center;
+}
+
+#clubs_main img {
+  display: block;
+  margin: 0 auto;
+}
+/* 여기까지 추가 수정 */
 a,
 a:link,
 a:visited {
@@ -16,122 +71,59 @@ li {
   width: 1140px;
   margin: 0 auto;
 }
-header {
-  position: fixed;
-  color: white;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  padding: 1rem;
-}
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-header nav ul {
-  display: flex;
-}
-header nav ul li {
-  padding: 10px;
-}
-header button {
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  color: white;
-}
-header h1 button {
-  font-size: 2rem;
-  font-weight: bold;
-}
-header nav ul li button {
-  font-size: 1.2rem;
-}
 
 main {
-  width: 100%;
-  height: 100vh;
-  color: white;
-  background: linear-gradient(rgba(0, 28, 72), rgba(0, 103, 172)),
-    url('images/me.jpg') center center;
-  background-size: cover;
+  background: linear-gradient(
+    rgba(0, 28, 72),
+    rgb(10, 57, 133),
+    rgba(0, 103, 172),
+    white
+  );
+}
+
+/* 메인 face, clubs_main 정렬 */
+#main {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center; /* 수직 중앙 정렬 */
+  align-items: center; /* 수평 중앙 정렬 */
+  height: 100vh; /* 화면 높이 100%를 사용 */
   text-align: center;
 }
-main h4 {
-  font-size: 2rem;
+
+#face {
+  margin-bottom: 5vh; /* 이미지와 테이블 사이의 간격 줄임, vh 단위 사용 */
+  transform: translateY(-20vh); /* 이미지를 뷰포트 높이의 5%만큼 위로 이동 */
 }
-main h2 {
-  font-size: 3.5rem;
-  margin: 2rem 0;
-  letter-spacing: 3px;
-  font-family: 'Varela Round', sans-serif;
+
+#clubs_main {
+  margin-top: -20vh; /* 테이블을 뷰포트 높이의 2%만큼 위로 이동 */
+  text-align: center;
 }
-main p {
-  max-width: 500px;
-  margin: 0 auto;
-  font-size: 1.25rem;
-}
-main button.download {
-  background-color: transparent;
-  border: 3px solid white;
-  border-radius: 20px;
-  padding: 1rem 2rem;
-  margin-top: 3rem;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-main button.mouse {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: upDown 1s ease-in-out infinite;
-  cursor: pointer;
-}
-@keyframes upDown {
-  0% {
-    bottom: 1rem;
-  }
-  50% {
-    bottom: 1.5rem;
-  }
-  100% {
-    bottom: 1rem;
-  }
-}
-main h2 span::after {
-  content: '';
-  height: 40px;
-  width: 3px;
-  background-color: #fff;
-  display: inline-block;
-  animation: blink 0.7s ease-in-out infinite;
-}
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+
+/* 얼굴 위치 조정 */
+/* #face {
+  margin-top: 80px;
+  margin-left: -125;
+} */
+
+/* 클럽들 가운데 정렬 */
+/* #clubs_main {
+  margin: auto;
+  border-collapse: collapse;
+  position: relative;
+  top: 60px;
+} */
+
+main td {
+  padding: 25px; /* 이미지 간 여백 조절 */
 }
 
 section {
-  font-family: 'Poppins', sans-serif;
   padding: 5rem 0;
 }
-section:nth-child(2n) {
-  background-color: #f8f8f8;
+section:nth-child(2n + 1) {
+  background-color: hsl(0, 0%, 97%);
 }
 section .title {
   margin-bottom: 3rem;
@@ -161,19 +153,24 @@ section .about-KLEAGUE .left img {
 }
 section .about-KLEAGUE .right {
   width: 50%;
-  float: left;
+  float: right;
   padding: 0 2rem;
 }
 section .about-KLEAGUE .right h3 {
-  font-size: 2.25rem;
+  font-size: 100px;
   margin-bottom: 1rem;
+  margin-right: -80px;
+  margin-left: -80px;
+  color: rgb(0, 103, 172);
 }
 section .about-KLEAGUE .right h3 strong {
-  color: rgb(238, 50, 36);
+  color: rgb(157, 10, 15);
 }
 section .about-KLEAGUE .right p {
   font-size: 1.15rem;
   margin: 1rem 0;
+  margin-left: -65px;
+  font-weight: 700;
 }
 section .about-KLEAGUE .right .social a {
   font-size: 2.5rem;
@@ -251,95 +248,4 @@ section.club .club-inner strong {
 }
 section.club .club-inner h3 {
   font-size: 1.75rem;
-}
-
-@media screen and (max-width: 1140px) {
-  main .container {
-    width: 992px;
-  }
-  section .container {
-    width: 600px;
-  }
-  section .about-KLEAGUE .left {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-  section .about-KLEAGUE .right {
-    width: 100%;
-    padding: 0;
-  }
-  section .do-me .do-inner {
-    width: 48%;
-    margin-bottom: 1.5rem;
-    margin-right: 0;
-  }
-  section .do-me .do-inner:nth-child(2n + 1) {
-    margin-right: 4%;
-  }
-  section .club-me .club-inner {
-    width: 48%;
-    margin-right: 0;
-  }
-  section .club-me .club-inner:nth-child(2n + 1) {
-    margin-right: 4%;
-  }
-  section.contact .contact-me .left {
-    width: 100%;
-  }
-  section.contact .contact-me .right {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 992px) {
-  html {
-    font-size: 14px;
-  }
-  main .container {
-    width: 768px;
-  }
-  section .club-me .club-inner {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 13px;
-  }
-  main .container {
-    width: 576px;
-  }
-  section .container {
-    width: 400px;
-  }
-  section .do-me .do-inner {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
-@media (max-width: 576px) {
-  html {
-    font-size: 12px;
-  }
-  main .container {
-    width: 400px;
-  }
-  section .container {
-    width: 360px;
-  }
-}
-
-@media (max-width: 400px) {
-  html {
-    font-size: 11px;
-  }
-  main .container {
-    width: 100%;
-  }
-  section .container {
-    width: 100%;
-  }
 }
