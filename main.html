@@ -1,472 +1,618 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>K-League</title>
-    <link rel="stylesheet" href="K_style.css" />
-    <style>
-       @font-face {
-            font-family: 'KLeagueBasic';
-            src: url('KLeagueBasic-Medium.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-    font-family: 'KLeagueBasic';
-    src: url('KLeagueDynamic-ExtraBold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-}
 
-        body {
-            font-family: 'KLeagueBasic', sans-serif;
-        }
-
-        
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="container"></div>
-    </header>
-    <!-- 사이드 네비게이션 -->
-    <div id="sideNav">
-      <a href="#about">about</a>
-      <a href="#features">Features</a>
-      <a href="#club">History</a>
-      <a href="#stadium">Stadiums</a>
-    </div>
-    <!-- 사이드 네비게이션 끝 -->
-    <main id="main">
-      <div class="container"></div>
-      <img
-        id="face"
-        src="https://i.namu.wiki/i/6rxUeUqnNh2QnqS7IKx2HXAS7-ykLxJtAxfr7eWFytmfEohBOKnCUoXzjDf5W0nxr-OLdskgPzvBX16Hdj9s2A.svg"
-        alt="k리그ci"
-        width="250"
-      />
-      <table id="clubs_main">
-        <tr>
-          <td>
-            <a href="http://127.0.0.1:5500/K/clubs/%EC%9A%B8%EC%82%B0.html"
-              ><img
-                src="https://i.namu.wiki/i/MjnPJR_w-RQFYUKtubhcCi53UrncMIzuW26nVhvmdbNtmAhPRY1KTrwoVIbVkz_27USOfOc3o_3vDZW0smmXsQ.svg"
-                alt="울산HD"
-                width="28"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://upload.wikimedia.org/wikipedia/ko/a/ab/%EC%A0%84%EB%B6%81_%ED%98%84%EB%8C%80_%EB%AA%A8%ED%84%B0%EC%8A%A4_%EB%A1%9C%EA%B3%A0.png"
-                alt="전북현대"
-                width="37"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://files.fcseoul.com/multi01/Club/Club/1701993821978.png"
-                alt="FC서울"
-                width="37"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://gangwon-fc.com/resources/images/content/img_emblem_logo.png"
-                alt="강원FC"
-                width="33"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://i.namu.wiki/i/m70Vxo-w52oF3bMayIyDN7PsXxDIMSGhJi8tUl1ldvWCdADMATQeF4kha7b5m-tN3QjntHnmUjkGC3znWOT-5A.svg"
-                alt="제주"
-                width="28"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://www.incheonutd.com/2018/resource/image/common/logo_footer.png"
-                alt="인천"
-                width="25"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://i.namu.wiki/i/hkur7CEkK44_wbgv0A1Fy-EnmwW4c9ZhqYaK8nge647zWOQ67bCNiKHY0qIYQMw1CNPjRgcwnBjbRWAAbVZQjw.svg"
-                alt="포항"
-                width="34"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://upload.wikimedia.org/wikipedia/ko/e/ed/Daejeon_Hana_Citizen_FC.png"
-                alt="대전"
-                width="25"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://i.namu.wiki/i/QAInK7TBps8-7KsiHAVaUDAl7PjK0lfCbN8pXISD0EjITluh4u2qWa65DzdVkIcWs_ir2FHXXQjyCyiO3MAM9Q.svg"
-                alt="김천상무"
-                width="33"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                id="수원_main"
-                src="https://cdn.interfootball.co.kr/news/photo/201603/106504_1.png"
-                alt="수원FC"
-                width="60"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://i.namu.wiki/i/1rW4lxWxKYT9FW71iy0Mgq3PK0oxPs620dAc_NYACpD13d4xQi-xLm1nRTBBEFIdWOyqwwKu-VqreKnrn3GXAw.svg"
-                alt="대구FC"
-                width="35"
-            /></a>
-          </td>
-          <td>
-            <a href=""
-              ><img
-                src="https://i.namu.wiki/i/4eBg10EJK6hQnxI4nF8fcJNw_bA0DPoPTqgppQQuajsu6HSzsA8GmzK_tka2OBNRT5HfbUI1cpVnNpM1GCHKKA.svg"
-                alt="광주FC"
-                width="25"
-            /></a>
-          </td>
-        </tr>
-      </table>
-    </main>
-    <section id="about" class="about">
-      <div class="container">
-        <div class="about-KLEAGUE">
-          <div class="left">
-            <img
-              src="https://www.kleague.com/assets/images/logo/emblem@2x.png"
-              alt="k리그"
-              height="300"
-            />
-          </div>
-          <div class="right">
-            <h3>역동과 <strong>감동</strong></h3>
-            <p id="slogan"><strong>Slogan</strong></p>
-            <br />
-            <br />
-            <p>
-              프로축구리그 순위 아시아 1위 - 13년 연속 선정<sub
-                >(IFFHS, 24년 1월 기준)</sub
-              >
-            </p>
-            <p>AFC 아시아챔피언스리그 최다 우승 리그<sub>(12회)</sub></p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="features" class="intro">
-      <div class="container">
-        <div class="title">
-          <br>
-          <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/2jxs6Xay4Co?si=0U7QrH1uqr0J2vHU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        </div>
-        <div class="intro-a">
-          <div class="do-inner">
-            <div class="icon"></div>
-            <div class="content">
-              <h3>abc</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                culpa magni laboriosam sit excepturi quibusdam adipisci, vero
-                debitis?
-              </p>
-            </div>
-          </div>
-          <div class="do-inner">
-            <div class="icon"></div>
-            <div class="content">
-              <h3>abc</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                culpa magni laboriosam sit excepturi quibusdam adipisci, vero
-                debitis?
-              </p>
-            </div>
-          </div>
-          <div class="do-inner">
-            <div class="icon"></div>
-            <div class="content">
-              <h3>abc</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                culpa magni laboriosam sit excepturi quibusdam adipisci, vero
-                debitis?
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="bg"></div>
-    <section id="club" class="club">
-      <div class="container">
-        <div class="title">
-          <h4>History</h4>
-          <h2>연혁</h2>
-        </div>
-        <div class="club-me">
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="stadium" class="stadium">
-      <div class="container">
-        <div class="title">
-          <h4>현황</h4>
-          <h2>구장</h2>
-        </div>
-        <div class="club-me">
-          <div class="club-inner">
-            <strong>양민혁</strong>
-
-            <h4>abc</h4>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-          <div class="club-inner">
-            <strong>abc</strong>
-            <h3>abc</h3>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr />
-    <footer>
-      <div class="container">
-        <div class="footer-content">
-          <p>Email: <a href="mailto:2862jsj@naver.com">2862jsj@naver.com</a></p>
-          <br />
-          <div class="social">
-            <a href="https://www.kleague.com/">kleague.com</a>
-          </div>
-        </div>
-        <button id="scrollTopBtn" title="Go to top">&#8679;</button>
-      </div>
-    </footer>
-    <style>
-      #slogan {
-        position: absolute;
-        margin-top: -40px;
-        margin-left: -75px;
-        color: rgb(232, 232, 232);
-        font-size: 50px;
-        z-index: -1;
-        font-weight: 999;
-      }
-      footer {
-        background: #333;
-        color: #fff;
-        padding: 20px 0;
-        text-align: center;
-      }
-      footer a {
-        color: #fff;
-        text-decoration: none;
-      }
-      .social a {
-        margin: 0 10px;
-      }
-      #scrollTopBtn {
-        display: none;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #555;
-        color: #fff;
-        border: none;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      #scrollTopBtn:hover {
-        background: #777;
-      }
-
-      /* 사이드 네비게이션 스타일 */
-      #sideNav {
-        position: fixed;
-        top: 40%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 200px;
-        background-color: #333;
-        color: #fff;
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-        transition: width 0.3s ease, transform 0.3s ease;
-        z-index: 2000;
-        border-radius: 0 20px 20px 0;
-      }
-      #sideNav a {
-        color: #fff;
-        text-decoration: none;
-        margin: 10px 0;
-        text-align: center;
-        font-size: 15px;
-        margin-right: 10px;
-        opacity: 0;
-      }
-      #sideNav a:hover {
-        color: #ccc;
-      }
-      #sideNav:hover {
-        width: 100px; /* 마우스가 올라갔을 때 너비를 100%로 설정 */
-      }
-      /* sideNav에 마우스가 올라갔을 때 링크를 보이게  */
-      #sideNav:hover a {
-        opacity: 1;
-      }
-      /* 사이드 네비게이션 스타일 끝 */
-      /* 비디오 스타일 */
-      .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 비율 유지 */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            background: #000;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-    </style>
-    <script>
-      
-    window.onscroll = function () {
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    const sideNav = document.getElementById('sideNav');
-    const main = document.getElementById('main');
-
-    // 현재 스크롤 위치
-    const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
-
-    // 화면의 아래쪽 위치 (뷰포트의 높이 + 스크롤 위치)
-    const viewportBottom = scrollPosition + window.innerHeight;
-
-    // main 섹션의 끝 위치
-    const mainBottom = main.offsetHeight;
-
-    if (viewportBottom >= mainBottom) {
-        // 화면의 아래쪽이 main 섹션을 벗어난 이후
-        scrollTopBtn.style.display = 'block';
-        sideNav.style.display = 'flex';
-        sideNav.style.transform = 'translateX(0)';
-        sideNav.style.pointerEvents = 'auto'; // Nav가 작동하도록 설정
-    } else {
-        // 화면의 아래쪽이 main 섹션에 있을 때
-        scrollTopBtn.style.display = 'none';
-        sideNav.style.transform = 'translateX(-100%)';
-        sideNav.style.pointerEvents = 'none'; // Nav가 작동하지 않도록 설정
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K-League</title>
+  <link rel="stylesheet" href="K_style.css" />
+  <style>
+    @font-face {
+      font-family: 'KLeagueBasic';
+      src: url('KLeagueBasic-Medium.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
     }
-};
+
+    @font-face {
+      font-family: 'KLeagueBasic';
+      src: url('KLeagueDynamic-ExtraBold.ttf') format('truetype');
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    body {
+      font-family: 'KLeagueBasic', sans-serif;
+    }
+
+    /* 네비게이션 컨테이너 스타일 */
+    #navContainer {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      z-index: 1000;
+    }
+
+    /* 버튼 스타일 */
+    #toggleNavBtn {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px 0 0 5px;
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1001;
+      /* Button on top */
+    }
+
+    /* 네비게이션 바 스타일 수정 */
+    #sideNavRight {
+      position: fixed;
+      right: -200px;
+      /* Initially hidden */
+      top: 0;
+      height: 100%;
+      width: 200px;
+      background: #333;
+      color: #fff;
+      overflow: hidden;
+      transition: right 0.3s;
+      z-index: 1000;
+      display: table;
+      /* 테이블 레이아웃 */
+      border-left: 1px solid #555;
+      /* 옵션: 네비게이션 바의 왼쪽 경계선 */
+    }
+
+    /* 테이블 레이아웃 스타일 */
+    #sideNavRight .table {
+      display: table;
+      width: 100%;
+      height: 100%;
+    }
+
+    #sideNavRight .row {
+      display: table-row;
+    }
+
+    #sideNavRight .cell {
+      display: table-cell;
+      text-align: center;
+      padding: 5px;
+    }
+
+    /* 오버레이 스타일 */
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      /* 반투명 검정색 */
+      display: none;
+      /* 초기에는 숨김 */
+      z-index: 999;
+      /* 네비게이션 바보다 아래에 표시 */
+    }
+
+    /* 버튼이 숨겨지는 스타일 */
+    #toggleNavBtn.hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container"></div>
+  </header>
+  <!-- 사이드 네비게이션 -->
+  <div id="sideNav">
+    <a href="#main">Main</a>
+    <a href="#about">Intro</a>
+    <a href="#features">Video</a>
+    <a href="#club">Players</a>
+    <a href="#stadium">Stadiums</a>
+  </div>
+  <!-- 사이드 네비게이션 끝 -->
 
 
-      document.getElementById('scrollTopBtn').onclick = function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      };
+  <!-- 네비게이션 컨테이너 추가 -->
+  <div id="navContainer">
+    <button id="toggleNavBtn">☰</button>
+    <nav id="sideNavRight">
+      <div class="table">
+        <div class="row">
+          <div class="cell">
+            <a href="https://www.uhfc.tv/">
+              <img
+                src="Ulsan.svg"
+                alt="울산HD" width="49" />
+            </a>
+          </div>
+          <div class="cell">
+            <a href="">
+              <img
+                src="Jeonbuk.png"
+                alt="전북현대" width="63" />
+            </a> 
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <a href=""><img src="seoul.png" alt="FC서울"
+                width="64" /></a>
+          </div>
+          <div class="cell">
+            <a href=""><img src="gangwon.png" alt="강원FC"
+                width="60" /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <a href=""><img
+                src="Jeju.svg"
+                alt="제주" width="54" /></a>
+          </div>
+          <div class="cell">
+            <a href=""><img src="Incheon.png" alt="인천"
+                width="48" /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <a href=""><img
+                src="Pohang.svg"
+                alt="포항" width="60" /></a>
+          </div>
+          <div class="cell">
+            <a href=""><img src="Daejeon.png" alt="대전"
+                width="50" /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <a href=""><img id="kc"
+                src="gimcheon.svg"
+                alt="김천상무" width="58" /></a>
+          </div>
+          <div class="cell">
+            <a href=""><img src="suwon.png" alt="수원FC"
+                width="70" /></a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="cell">
+            <a href=""><img
+                src="Daegu.svg"
+                alt="대구FC" width="60" /></a>
+          </div>
+          <div class="cell">
+            <a href=""><img
+                src="gwangju.svg"
+                alt="광주FC" width="48" /></a>
+          </div>
+        </div>
+      </div>
+  </div>
+  </nav>
+  </div>
 
-      document.querySelectorAll('nav img').forEach((img) => {
-        img.addEventListener('mouseover', function () {
-          this.style.transform = 'translateY(4px)'; // 아래로 4px 이동
-        });
-        img.addEventListener('mouseout', function () {
-          this.style.transform = 'translateY(0)'; // 원래 위치로 이동
-        });
+  <!-- 오버레이 추가 -->
+  <div id="overlay"></div>
+
+  <main id="main">
+    <div class="container"></div>
+    <img id="face"
+      src="Face.svg"
+      alt="k리그ci" width="250" />
+    <table id="clubs_main">
+      <tr>
+        <td>
+          <a href="http://127.0.0.1:5500/K/clubs/%EC%9A%B8%EC%82%B0.html"><img
+              src="Ulsan.svg"
+              alt="울산HD" width="28" /></a>
+        </td>
+        <td>
+          <a href=""><img
+              src="Jeonbuk.png"
+              alt="전북현대" width="37" /></a>
+        </td>
+        <td>
+          <a href=""><img src="seoul.png" alt="FC서울"
+              width="37" /></a>
+        </td>
+        <td>
+          <a href=""><img src="gangwon.png" alt="강원FC"
+              width="33" /></a>
+        </td>
+        <td>
+          <a href=""><img
+              src="Jeju.svg"
+              alt="제주" width="28" /></a>
+        </td>
+        <td>
+          <a href=""><img src="Incheon.png" alt="인천"
+              width="25" /></a>
+        </td>
+        <td>
+          <a href=""><img
+              src="Pohang.svg"
+              alt="포항" width="34" /></a>
+        </td>
+        <td>
+          <a href=""><img src="Daejeon.png" alt="대전"
+              width="25" /></a>
+        </td>
+        <td>
+          <a href=""><img
+              src="gimcheon.svg"
+              alt="김천상무" width="30" /></a>
+        </td>
+        <td>
+          <a href=""><img id="수원_main" src="suwon.png" alt="수원FC"
+              width="40" /></a>
+        </td>
+        <td>
+          <a href=""><img
+              src="Daegu.svg"
+              alt="대구FC" width="35" /></a>
+        </td>
+        <td>
+          <a href=""><img
+              src="gwangju.svg"
+              alt="광주FC" width="25" /></a>
+        </td>
+      </tr>
+    </table>
+  </main>
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-KLEAGUE">
+        <div class="left">
+          <img src="Kleague_ci.png" alt="k리그" height="300" />
+        </div>
+        <div class="right">
+          <h3>역동과 <strong>감동</strong></h3>
+          <p id="slogan"><strong>Slogan</strong></p>
+          <br />
+          <br />
+          <p>
+            프로축구리그 순위 <b style="color: rgb(238, 50, 36); font-size:larger;">아시아 1위</b> - 13년 연속 선정<sub>&nbsp;(IFFHS, 24년
+              기준)</sub>
+          </p>
+          <p>AFC 아시아챔피언스리그 <b style="color: rgb(238, 50, 36); font-size:larger;">최다 우승 리그</b><sub>&nbsp;(12회)</sub></p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="features" class="intro">
+    <div class="container">
+      <div class="title">
+        <div class="video-container" style="margin-top: -30px;">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/2jxs6Xay4Co?si=0U7QrH1uqr0J2vHU"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="intro-a">
+        <div class="do-inner" style=" cursor: pointer;" onclick="window.open('https://www.hanabank.com/');">
+          <div class="icon"></div>
+          <div class="content">
+            <p>
+              <img src="hanabank.png" alt="하나은행"
+                width="260px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+              culpa magni laboriosam sit excepturi quibusdam adipisci, vero
+              debitis?
+            </p>
+          </div>
+        </div>
+        <div class="do-inner" style=" cursor: pointer;" onclick="window.open('https://www.ea.com/sports');">
+          <div class="icon"></div>
+          <div class="content">
+            <p>
+              <img src="EA_sports.png" alt="EA" width="260px">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+              culpa magni laboriosam sit excepturi quibusdam adipisci, vero
+              debitis?
+            </p>
+          </div>
+        </div>
+        <div class="do-inner" style=" cursor: pointer;" onclick="window.open('https://www.coupangplay.com/home');">
+          <div class="icon"></div>
+          <div class="content">
+            <p>
+              <img src="Coupang.png" alt="쿠팡플레이"
+                width="260px">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                culpa magni laboriosam sit excepturi quibusdam adipisci, vero
+                debitis?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bg"></div>
+  <section id="club" class="club">
+    <div class="container">
+      <div class="title">
+        <h4>Star Players</h4>
+        <h2>스타 플레이어</h2>
+      </div>
+      <div class="club-me">
+        <div class="club-inner">
+          <div class="player_left">
+            <img src="player_lingard.png" alt="린가드">
+          </div>
+          <div class="player_right">
+            <p style="font-size: 60px;">린가드</p>
+          </div>
+
+        </div>
+        <div class="club-inner">
+
+        </div>
+        <div class="club-inner">
+
+        </div>
+        <div class="club-inner">
+
+        </div>
+        <div class="club-inner">
+
+        </div>
+        <div class="club-inner">
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="stadium" class="stadium">
+    <div class="container">
+      <div class="title">
+        <h4>Stadiums</h4>
+        <h2>경기장</h2>
+      </div>
+      <div class="club-me">
+        <div class="club-inner">
+          <strong>abc</strong>
+
+          <h4>abc</h4>
+        </div>
+        <div class="club-inner">
+          <strong>abc</strong>
+          <h3>abc</h3>
+        </div>
+        <div class="club-inner">
+          <strong>abc</strong>
+          <h3>abc</h3>
+        </div>
+        <div class="club-inner">
+          <strong>abc</strong>
+          <h3>abc</h3>
+        </div>
+        <div class="club-inner">
+          <strong>abc</strong>
+          <h3>abc</h3>
+        </div>
+        <div class="club-inner">
+          <strong>abc</strong>
+          <h3>abc</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>Email: <a href="mailto:2862jsj@naver.com">2862jsj@naver.com</a></p>
+        <br />
+        <div class="social">
+          <a href="https://www.kleague.com/">kleague.com</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <style>
+    #slogan {
+      position: absolute;
+      margin-top: -40px;
+      margin-left: -75px;
+      color: rgb(232, 232, 232);
+      font-size: 50px;
+      z-index: -1;
+      font-weight: 999;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .social a {
+      margin: 0 10px;
+    }
+
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #555;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #scrollTopBtn:hover {
+      background: #777;
+    }
+
+ /* 사이드 네비게이션 스타일 */
+ #sideNav {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 240px;
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      /* 항상 보이도록 설정 */
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      transition: width 0.3s ease, transform 0.3s ease;
+      z-index: 2000;
+      border-radius: 0 20px 20px 0;
+    }
+
+    #sideNav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px 0;
+      text-align: center;
+      font-size: 15px;
+      margin-right: 10px;
+      opacity: 0;
+      /* 기본적으로 숨김 처리 */
+    }
+
+    #sideNav a:hover {
+      color: #ccc;
+    }
+
+    #sideNav:hover {
+      width: 100px;
+      /* 마우스가 올라갔을 때 너비를 100%로 설정 */
+    }
+
+    /* sideNav에 마우스가 올라갔을 때 링크를 보이게  */
+    #sideNav:hover a {
+      opacity: 1;
+    }
+
+    /* 사이드 네비게이션 스타일 끝 */
+    /* 비디오 스타일 */
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 비율 유지 */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script>
+
+    const toggleNavBtn = document.getElementById('toggleNavBtn');
+    const sideNav = document.getElementById('sideNavRight');
+    const overlay = document.getElementById('overlay');
+
+    // 버튼 클릭 시 네비게이션 바와 오버레이 토글
+    toggleNavBtn.addEventListener('click', function () {
+      if (sideNav.style.right === '0px') {
+        sideNav.style.right = '-200px';
+        overlay.style.display = 'none'; // 오버레이 숨기기
+        toggleNavBtn.classList.remove('hidden');
+      } else {
+        sideNav.style.right = '0px';
+        overlay.style.display = 'block'; // 오버레이 보이기
+        toggleNavBtn.classList.add('hidden');
+      }
+    });
+
+    // 화면의 다른 부분 클릭 시 네비게이션 바와 오버레이 숨기기
+    document.addEventListener('click', function (event) {
+      if (
+        !sideNav.contains(event.target) &&
+        !toggleNavBtn.contains(event.target) &&
+        !overlay.contains(event.target)
+      ) {
+        sideNav.style.right = '-200px';
+        overlay.style.display = 'none'; // 오버레이 숨기기
+        toggleNavBtn.classList.remove('hidden');
+      }
+    });
+
+    // 오버레이 클릭 시 네비게이션 바와 오버레이 숨기기
+    overlay.addEventListener('click', function () {
+      sideNav.style.right = '-200px';
+      overlay.style.display = 'none'; // 오버레이 숨기기
+      toggleNavBtn.classList.remove('hidden');
+    });
+
+
+    document.querySelectorAll('nav img').forEach((img) => {
+      img.addEventListener('mouseover', function () {
+        this.style.transform = 'translateY(4px)'; // 아래로 4px 이동
       });
-
-      // 메인 클럽 효과
-      document.querySelectorAll('#clubs_main img').forEach((img) => {
-        img.addEventListener('mouseover', () => {
-          img.style.transform = 'translateY(3px)';
-        });
-        img.addEventListener('mouseout', () => {
-          img.style.transform = 'translateY(0)';
-        });
+      img.addEventListener('mouseout', function () {
+        this.style.transform = 'translateY(0)'; // 원래 위치로 이동
       });
+    });
 
-// sidenav 스크롤 애니메이션
-  document.querySelectorAll('#sideNav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    // 메인 클럽 효과
+    document.querySelectorAll('#clubs_main img').forEach((img) => {
+      img.addEventListener('mouseover', () => {
+        img.style.transform = 'translateY(3px)';
+      });
+      img.addEventListener('mouseout', () => {
+        img.style.transform = 'translateY(0)';
+      });
+    });
+
+    // sidenav 스크롤 애니메이션
+    document.querySelectorAll('#sideNav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href').substring(1);
         const targetElement = document.getElementById(targetId);
 
         targetElement.scrollIntoView({
-            behavior: 'smooth'
+          behavior: 'smooth'
         });
+      });
     });
-});
-// 스크롤 애니 끝
+    // 스크롤 애니 끝
 
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
