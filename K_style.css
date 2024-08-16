@@ -129,12 +129,22 @@ section .title {
   margin-bottom: 3rem;
 }
 section .title h4 {
-  font-size: 1.35rem;
-  color: rgb(238, 50, 36);
+  font-size: 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(238, 49, 36, 0.47),
+    rgba(238, 49, 36, 0.129)
+  ); /* 그라데이션 */
+  -webkit-background-clip: text; /* 텍스트에 배경 클립 적용 */
+  background-clip: text; /* 텍스트에 배경 클립 적용 */
+  color: transparent; /* 텍스트 색상을 투명하게 설정 */
   position: relative;
+  background-size: 40% 100%;
 }
 section .title h2 {
-  font-size: 3.5rem;
+  font-size: 5rem;
+  margin-top: -15px;
+  color: rgb(0, 103, 172);
 }
 section .title p {
   font-size: 1.15rem;
@@ -205,7 +215,7 @@ section .intro-a .do-inner .content p {
   font-size: 1.15rem;
 }
 section .intro-a .do-inner:hover {
-  background-color: rgb(157, 10, 15);
+  background-color: rgb(198, 200, 202);
   color: white;
 }
 section .intro-a .do-inner:hover i {
@@ -213,8 +223,7 @@ section .intro-a .do-inner:hover i {
 }
 
 .bg {
-  background: url('https://interbrand.com/wp-content/uploads/2021/08/8-2048x1153.jpg')
-    center center;
+  background: url('Kleage_patch_background.jpg') center center;
   background-size: cover;
   background-attachment: fixed;
   height: 650px;
@@ -226,7 +235,7 @@ section.club::after {
   clear: both;
 }
 section.club .club-inner {
-  width: 30%;
+  width: 100%;
   margin-right: 5%;
   padding: 1rem 1rem 1.5rem 1rem;
   float: left;
@@ -234,6 +243,14 @@ section.club .club-inner {
   border: 1px solid #ccc;
   margin-bottom: 3rem;
 }
+.player_left,
+.player_right {
+  float: left;
+  width: 50%;
+  height: 400px;
+  margin: 0;
+}
+
 section.club .club-inner:nth-child(3n) {
   margin-right: 0;
 }
