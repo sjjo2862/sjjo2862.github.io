@@ -1,0 +1,502 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 페이지 설정 */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#slogan {
+  position: absolute;
+  margin-top: -40px;
+  margin-left: -75px;
+  color: rgb(232, 232, 232);
+  font-size: 50px;
+  z-index: -1;
+  font-weight: 999;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* 왼쪽 사이드 네비게이션 스타일 */
+#sideNav {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 200px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  /* 항상 보이도록 설정 */
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  transition: width 0.3s ease, transform 0.3s ease;
+  z-index: 2000;
+  border-radius: 0 20px 20px 0;
+}
+
+#sideNav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 15px;
+  margin-right: 10px;
+  opacity: 0;
+  /* 기본적으로 숨김 처리 */
+}
+
+#sideNav a:hover {
+  color: #ccc;
+}
+
+#sideNav:hover {
+  width: 100px;
+  /* 마우스가 올라갔을 때 너비를 100%로 설정 */
+}
+
+/* sideNav에 마우스가 올라갔을 때 링크를 보이게  */
+#sideNav:hover a {
+  opacity: 1;
+}
+
+/* 왼쪽 사이드 네비게이션 스타일 끝 */
+
+/* 오른쪽 네비게이션 컨테이너 스타일 */
+#navContainer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+/* 오른쪽 버튼 스타일 */
+#toggleNavBtn {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+  /* Button on top */
+}
+
+/* 오른쪽 네비게이션 바 스타일 수정 */
+#sideNavRight {
+  position: fixed;
+  right: -200px;
+  /* Initially hidden */
+  top: 0;
+  height: 100%;
+  width: 200px;
+  background: #333;
+  color: #fff;
+  overflow: hidden;
+  transition: right 0.3s;
+  z-index: 1000;
+  display: table;
+  /* 테이블 레이아웃 */
+  border-left: 1px solid #555;
+  /* 옵션: 네비게이션 바의 왼쪽 경계선 */
+}
+
+/* 테이블 레이아웃 스타일 */
+#sideNavRight .table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+#sideNavRight .row {
+  display: table-row;
+}
+
+#sideNavRight .cell {
+  display: table-cell;
+  text-align: center;
+  padding: 5px;
+}
+
+/* 오버레이 스타일 */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* 반투명 검정색 */
+  display: none;
+  /* 초기에는 숨김 */
+  z-index: 999;
+  /* 네비게이션 바보다 아래에 표시 */
+}
+
+/* 버튼이 숨겨지는 스타일 */
+#toggleNavBtn.hidden {
+  display: none;
+}
+
+/* 비디오 스타일 */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 비율 유지 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* 수직 정렬을 상단으로 설정 */
+  height: 100vh;
+  text-align: center;
+}
+
+#face {
+  position: relative;
+  top: -20vh;
+  /* 필요한 만큼 값을 조정하여 위로 이동 */
+  margin-bottom: 3vh;
+}
+
+#clubs_main {
+  position: relative;
+  top: -5vh;
+  /* 필요한 만큼 값을 조정하여 위로 이동 */
+  margin-top: 0;
+  text-align: center;
+}
+
+/* 섹션 스타일 */
+section {
+  min-height: 100vh;
+  /* 각 섹션의 최소 높이를 화면 높이로 설정 */
+  width: 100%;
+  /* 각 섹션이 화면의 100% 너비를 차지 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+#clubs_main td {
+  padding: 0 15px;
+  /* 각 항목 사이의 여유 공간 */
+  text-align: center;
+}
+
+#clubs_main img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* 여기까지 추가 수정 */
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+main {
+  background: linear-gradient(
+    rgba(0, 124, 108),
+    #18ab98,
+    rgb(100, 189, 177),
+    white
+  );
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* 수직 중앙 정렬 */
+  height: 100vh;
+  /* 화면 높이 100%를 사용 */
+  text-align: center;
+}
+
+#face {
+  margin-bottom: 5vh;
+  /* 이미지와 테이블 사이의 간격 줄임 */
+  transform: translateY(0);
+}
+
+#clubs_main {
+  top: 35vh;
+  margin-top: -50vh;
+  text-align: center;
+}
+
+/* 얼굴 위치 조정 */
+/* #face {
+    margin-top: 80px;
+    margin-left: -125;
+  } */
+
+/* 클럽들 가운데 정렬 */
+/* #clubs_main {
+    margin: auto;
+    border-collapse: collapse;
+    position: relative;
+    top: 60px;
+  } */
+
+main td {
+  padding: 25px;
+  /* 이미지 간 여백 조절 */
+}
+
+section {
+  padding: 5rem 0;
+}
+
+section:nth-child(2n) {
+  background-color: hsl(0, 0%, 97%);
+}
+
+section .title {
+  margin-bottom: 3rem;
+}
+
+section .title h4 {
+  font-size: 2rem;
+  background: linear-gradient(
+    to right,
+    rgba(238, 49, 36, 0.47),
+    rgba(238, 49, 36, 0.129)
+  );
+  /* 그라데이션 */
+  -webkit-background-clip: text;
+  /* 텍스트에 배경 클립 적용 */
+  background-clip: text;
+  /* 텍스트에 배경 클립 적용 */
+  color: transparent;
+  /* 텍스트 색상을 투명하게 설정 */
+  position: relative;
+  background-size: 40% 100%;
+}
+
+section .title h2 {
+  font-size: 5rem;
+  margin-top: -15px;
+  color: rgb(0, 103, 172);
+}
+
+section .title p {
+  font-size: 1.15rem;
+}
+
+section .about-KLEAGUE::after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+section .about-KLEAGUE .left {
+  width: 50%;
+  float: left;
+}
+
+section .about-KLEAGUE .left img {
+  max-width: 100%;
+}
+
+section .about-KLEAGUE .right {
+  width: 50%;
+  float: right;
+  padding: 0 2rem;
+}
+
+section .about-KLEAGUE .right h3 {
+  font-size: 100px;
+  margin-bottom: 1rem;
+  margin-right: -80px;
+  margin-left: -80px;
+  color: rgb(0, 103, 172);
+}
+
+section .about-KLEAGUE .right h3 strong {
+  color: rgb(157, 10, 15);
+}
+
+section .about-KLEAGUE .right p {
+  font-size: 1.15rem;
+  margin: 1rem 0;
+  margin-left: -65px;
+  font-weight: 700;
+}
+
+section .intro-a::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+section .intro-a .do-inner {
+  background-color: #fff;
+  width: 30%;
+  padding: 2rem;
+  float: left;
+  margin-right: 5%;
+  cursor: pointer;
+}
+
+section .intro-a .do-inner:last-child {
+  margin-right: 0;
+}
+
+section .intro-a .do-inner .icon i {
+  font-size: 2.5rem;
+  color: rgb(238, 50, 36);
+}
+
+section .intro-a .do-inner .content h3 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+section .intro-a .do-inner .content p {
+  font-size: 1.15rem;
+}
+
+section .intro-a .do-inner:hover {
+  background-color: rgb(198, 200, 202);
+  color: white;
+}
+
+section .intro-a .do-inner:hover i {
+  color: white;
+}
+
+.bg {
+  background: url('image/Kleage_patch_background.jpg') center center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 650px;
+}
+
+section.club::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.club-inner {
+  display: flex;
+  /* 플렉스박스를 사용하여 왼쪽과 오른쪽 섹션을 정렬합니다 */
+  width: 100%;
+  margin-right: 5%;
+  padding: 1rem 1rem 1.5rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.player_left,
+.player_right {
+  width: 50%;
+  /* 각각의 섹션이 컨테이너의 절반 너비를 차지하도록 설정합니다 */
+  margin: 0;
+}
+
+.player_left {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  /* 이미지를 수직 및 수평으로 가운데 정렬합니다 */
+}
+
+section.club .club-inner img,
+section.stadium .club-inner img {
+  max-width: 100%;
+  /* 이미지가 컨테이너 너비를 초과하지 않도록 설정합니다 */
+  height: auto;
+  /* 이미지 비율을 유지합니다 */
+}
+
+.player_right {
+  align-items: center;
+  justify-content: center;
+  /* 텍스트를 수직으로 가운데 정렬합니다 */
+}
+
+.player_img {
+  border-radius: 10px;
+  /* 모서리 둥글게 하기 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.tagline {
+  margin-top: -30px;
+}
+
+section.club .club-inner strong {
+  color: #ff6a6a;
+  margin: 0.5rem 0;
+  display: block;
+}
+
+section.club .club-inner h3 {
+  font-size: 1.75rem;
+}
+
+section.club .club-inner:nth-child(3n) {
+  margin-right: 0;
+}

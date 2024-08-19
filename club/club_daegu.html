@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대구FC</title>
+    <link rel="stylesheet" href="club_daegu.css" />
+    <style>
+      @font-face {
+        font-family: 'KLeagueBasic';
+        src: url('font/KLeagueBasic-Medium.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'KLeagueBasic';
+        src: url('font/KLeagueDynamic-ExtraBold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      body {
+        font-family: 'KLeagueBasic', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 왼쪽 사이드 네비게이션 -->
+    <div id="sideNav">
+      <a href="#main">Main</a>
+      <a href="#about">Intro</a>
+      <a href="#club">Player</a>
+      <a href="#stadium">Stadiums</a>
+    </div>
+    <!-- 사이드 네비게이션 끝 -->
+
+    <!-- 오른쪽 네비게이션 컨테이너 추가 -->
+    <div id="navContainer">
+      <button id="toggleNavBtn">☰</button>
+      <nav id="sideNavRight">
+        <div class="table">
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_ulsan.html">
+                <img src="image/Ulsan.svg" alt="울산HD" width="49" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_jeonbuk.html">
+                <img src="image/Jeonbuk.png" alt="전북현대" width="63" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_seoul.html">
+                <img src="image/seoul.png" alt="FC서울" width="64" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_gangwon.html">
+                <img src="image/gangwon.png" alt="강원FC" width="60" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_jeju.html">
+                <img src="image/Jeju.svg" alt="제주" width="54" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_incheon.html">
+                <img src="image/Incheon.png" alt="인천" width="48" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_pohang.html">
+                <img src="image/Pohang.svg" alt="포항" width="60" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_daejeon.html">
+                <img src="image/Daejeon.png" alt="대전" width="50" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_gimcheon.html">
+                <img
+                  id="kc"
+                  src="image/gimcheon.svg"
+                  alt="김천상무"
+                  width="58"
+                />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_suwon.html">
+                <img src="image/suwon.png" alt="수원FC" width="70" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_daegu.html">
+                <img src="image/Daegu.svg" alt="대구FC" width="60" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_gwangju.html">
+                <img src="image/gwangju.svg" alt="광주FC" width="48" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 오버레이 추가 -->
+    <div id="overlay"></div>
+
+    <main id="main">
+      <img id="face" src="image/Daegu.svg" alt="대구FC" width="320" />
+      <table id="clubs_main">
+        <tr>
+          <td>
+            <a href="/main/index.html">
+              <img src="image/Kleague_ci.png" alt="K리그" width="28" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_ulsan.html">
+              <img src="image/Ulsan.svg" alt="울산HD" width="28" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_jeonbuk.html">
+              <img src="image/Jeonbuk.png" alt="전북현대" width="37" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_seoul.html">
+              <img src="image/seoul.png" alt="FC서울" width="30" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_gangwon.html">
+              <img src="image/gangwon.png" alt="강원FC" width="33" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_jeju.html">
+              <img src="image/Jeju.svg" alt="제주" width="28" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_incheon.html">
+              <img src="image/Incheon.png" alt="인천" width="25" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_pohang.html">
+              <img src="image/Pohang.svg" alt="포항" width="34" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_daejeon.html">
+              <img src="image/Daejeon.png" alt="대전" width="25" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_gimcheon.html">
+              <img src="image/gimcheon.svg" alt="김천상무" width="30" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_suwon.html">
+              <img
+                id="수원_main"
+                src="image/suwon.png"
+                alt="수원FC"
+                width="40"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_gwangju.html">
+              <img src="image/gwangju.svg" alt="광주FC" width="25" />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </main>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-KLEAGUE">
+          <div class="left">
+            <img src="image/Daegu.svg" alt="대구FC" height="300" />
+          </div>
+          <div class="right">
+            <h3 style="font-size: 70px">시민구단의 모범</h3>
+            <p>
+              대구광역시 안에서의 대구 FC는 문화로 자리매김한 듯하다. 2023 시즌,
+              11번의 매진을 기록할 정도로 직관을 위해선 티켓이 오픈하자마자
+              예매를 진행해야 하며 티켓을 웃돈을 주고 판매하는 암표까지 있을
+              정도이다.
+              <br />
+              팀의 살아있는 레전드인
+              <b style="color: hsl(203, 100%, 63%); font-size: larger"
+                >세징야와 에드가</b
+              >가 점점 노쇠화가 되어가지만 고재현, 황재원 등 뛰어난 어린
+              자원들이 있기 때문에 새로운 에이스 등장을 기다리는 대구 FC이다.
+              <br />
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg"></div>
+
+    <section id="club" class="club">
+      <div class="container">
+        <div class="title">
+          <h4>Key Player</h4>
+          <h2>주요 선수</h2>
+        </div>
+
+        <div class="club-me">
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_daegu.jpg"
+                alt="세징야"
+                width="450px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 80px">세징야</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 50px; color: rgb(0, 103, 172)"
+              >
+                대구가 아닌, K리그의 전설
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li>→ SC 코린치안스 (2010)</li>
+                <li>→ 우니앙 바르바렌시 (2011)</li>
+                <li>→ 아우닥스 상파울루 (2011)</li>
+                <li>→ 우니앙 바르바렌시 (2012)</li>
+                <li>→ CA 브라간치누 (2012~2016)</li>
+                <li>→ 대구 FC (2016/임대)</li>
+                <li>→ 대구 FC (2017~)</li>
+                <br /><br />
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stadium" class="stadium">
+      <div class="container">
+        <div class="title">
+          <h4>Stadiums</h4>
+          <h2>경기장</h2>
+        </div>
+
+        <div class="club-me">
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 60px">DGB대구은행파크</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                접근성도 좋은 "대팍"
+              </p>
+              <br /><br />
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_daegu.jpg"
+                alt="울산문수축구경기장"
+                width="510px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="https://www.kleague.com/" target="_blank"
+              ><img src="image/Kleague_footer.png" alt="kleague" width="40px"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="club.js"></script>
+  </body>
+</html>
