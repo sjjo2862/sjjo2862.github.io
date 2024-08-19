@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-League</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @font-face {
+        font-family: 'KLeagueBasic';
+        src: url('font/KLeagueBasic-Medium.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'KLeagueBasic';
+        src: url('font/KLeagueDynamic-ExtraBold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+      }
+
+      body {
+        font-family: 'KLeagueBasic', sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 왼쪽 사이드 네비게이션 -->
+    <div id="sideNav">
+      <a href="#main">Main</a>
+      <a href="#about">Intro</a>
+      <a href="#features">Video</a>
+      <a href="#club">Players</a>
+      <a href="#stadium">Stadiums</a>
+    </div>
+    <!-- 사이드 네비게이션 끝 -->
+
+    <!-- 오른쪽 네비게이션 컨테이너 추가 -->
+    <div id="navContainer">
+      <button id="toggleNavBtn">☰</button>
+      <nav id="sideNavRight">
+        <div class="table">
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_ulsan.html">
+                <img src="image/Ulsan.svg" alt="울산HD" width="49" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_jeonbuk.html">
+                <img src="image/Jeonbuk.png" alt="전북현대" width="63" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_seoul.html">
+                <img src="image/seoul.png" alt="FC서울" width="64" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_gangwon.html">
+                <img src="image/gangwon.png" alt="강원FC" width="60" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_jeju.html">
+                <img src="image/Jeju.svg" alt="제주" width="54" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_incheon.html">
+                <img src="image/Incheon.png" alt="인천" width="48" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_pohang.html">
+                <img src="image/Pohang.svg" alt="포항" width="60" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_daejeon.html">
+                <img src="image/Daejeon.png" alt="대전" width="50" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_gimcheon.html">
+                <img
+                  id="kc"
+                  src="image/gimcheon.svg"
+                  alt="김천상무"
+                  width="58"
+                />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_suwon.html">
+                <img src="image/suwon.png" alt="수원FC" width="70" />
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+              <a href="/club/club_daegu.html">
+                <img src="image/Daegu.svg" alt="대구FC" width="60" />
+              </a>
+            </div>
+            <div class="cell">
+              <a href="/club/club_gwangju.html">
+                <img src="image/gwangju.svg" alt="광주FC" width="48" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- 오버레이 추가 -->
+    <div id="overlay"></div>
+
+    <main id="main">
+      <img id="face" src="image/Face.svg" alt="K리그" width="250" />
+
+      <table id="clubs_main">
+        <tr>
+          <td>
+            <a href="/club/club_ulsan.html">
+              <img src="image/Ulsan.svg" alt="울산HD" width="28" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_jeonbuk.html">
+              <img src="image/Jeonbuk.png" alt="전북현대" width="37" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_seoul.html">
+              <img src="image/seoul.png" alt="FC서울" width="30" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_gangwon.html">
+              <img src="image/gangwon.png" alt="강원FC" width="33" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_jeju.html">
+              <img src="image/Jeju.svg" alt="제주" width="28" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_incheon.html">
+              <img src="image/Incheon.png" alt="인천" width="25" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_pohang.html">
+              <img src="image/Pohang.svg" alt="포항" width="34" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_daejeon.html">
+              <img src="image/Daejeon.png" alt="대전" width="25" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_gimcheon.html">
+              <img src="image/gimcheon.svg" alt="김천상무" width="30" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_suwon.html">
+              <img
+                id="수원_main"
+                src="image/suwon.png"
+                alt="수원FC"
+                width="40"
+              />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_daegu.html">
+              <img src="image/Daegu.svg" alt="대구FC" width="35" />
+            </a>
+          </td>
+          <td>
+            <a href="/club/club_gwangju.html">
+              <img src="image/gwangju.svg" alt="광주FC" width="25" />
+            </a>
+          </td>
+        </tr>
+      </table>
+    </main>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-KLEAGUE">
+          <div class="left">
+            <img src="image/Kleague_ci.png" alt="k리그" height="300" />
+          </div>
+          <div class="right">
+            <h3>역동과 <strong>감동</strong></h3>
+            <p id="slogan"><strong>Slogan</strong></p>
+            <br />
+            <br />
+            <p>
+              프로축구리그 순위
+              <b style="color: rgb(238, 50, 36); font-size: larger"
+                >아시아 1위</b
+              >
+              - 13년 연속 선정<sub>&nbsp;(IFFHS, 24년 기준)</sub>
+            </p>
+            <p>
+              AFC 아시아챔피언스리그
+              <b style="color: rgb(238, 50, 36); font-size: larger"
+                >최다 우승 리그</b
+              ><sub>&nbsp;(12회)</sub>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="intro">
+      <div class="container">
+        <div class="title">
+          <div class="video-container" style="margin-top: -30px">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/2jxs6Xay4Co?si=0U7QrH1uqr0J2vHU"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="intro-a">
+          <div
+            class="do-inner"
+            style="cursor: pointer"
+            onclick="window.open('https://www.hanabank.com/');"
+          >
+            <div class="icon"></div>
+            <div class="content">
+              <img src="image/hanabank.png" alt="하나은행" width="260px" />
+            </div>
+          </div>
+          <div
+            class="do-inner"
+            style="cursor: pointer"
+            onclick="window.open('https://www.ea.com/sports');"
+          >
+            <div class="icon"></div>
+            <div class="content">
+              <img src="image/EA_sports.png" alt="EA" width="260px" />
+            </div>
+          </div>
+          <div
+            class="do-inner"
+            style="cursor: pointer"
+            onclick="window.open('https://www.coupangplay.com/home');"
+          >
+            <div class="icon"></div>
+            <div class="content">
+              <img src="image/Coupang.png" alt="쿠팡플레이" width="260px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg"></div>
+
+    <section id="club" class="club">
+      <div class="container">
+        <div class="title">
+          <h4>Star Players</h4>
+          <h2>스타 플레이어</h2>
+        </div>
+
+        <div class="club-me">
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_lingard.png"
+                alt="린가드"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 80px">린가드</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 50px; color: rgb(0, 103, 172)"
+              >
+                K리그 역사상 최고의 명성
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li style="font-size: 30px; color: rgb(218, 21, 21)">
+                  맨체스터 유나이티드 (2011~2022)
+                </li>
+                <li>→ 레스터 시티 FC (2012~2013 / 임대)</li>
+                <li>→ 버밍엄 시티 FC (2013~2014 / 임대)</li>
+                <li>→ 브라이튼 앤 호브 알비온 (2014 / 임대)</li>
+                <li>→ 더비 카운티 FC (2015 / 임대)</li>
+                <li>→ 웨스트햄 유나이티드 FC (2021 / 임대)</li>
+                <li>노팅엄 포레스트 FC (2022~2023)</li>
+                <li>FC 서울 (2024~ )</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 80px">기성용</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 60px; color: rgb(0, 103, 172)"
+              >
+                영원한 캡틴
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li>FC 서울 (2006~2009)</li>
+                <li style="font-size: 23px; color: hwb(126 7% 46%)">
+                  셀틱FC (2010~2012)
+                </li>
+                <li style="font-size: 23px; color: #a17b54">
+                  스완지 시티 AFC (2012~2018)
+                </li>
+                <li>→ 선덜랜드 AFC (2013~2014 / 임대)</li>
+                <li>뉴캐슬 유나이티드 FC (2018~2020)</li>
+                <li>RCD 마요르카 (2020)</li>
+                <li>FC 서울 (2020~ )</li>
+              </ul>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_kiseungyong.png"
+                alt="기성용"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_leeseungwoo3.jpg"
+                alt="이승우"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 80px">이승우</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 60px; color: rgb(0, 103, 172)"
+              >
+                논란의 중심
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li style="font-size: 20px; color: rgb(165, 0, 68)">
+                  FC 바르셀로나 B (2016~2017)
+                </li>
+                <li>엘라스 베로나 FC (2017~2019)</li>
+                <li>신트트라위던 VV (2019~2021)</li>
+                <li>→ 포르티모넨스 SC (2021 / 임대)</li>
+                <li>수원 FC (2022~2024)</li>
+                <li>전북 현대 모터스 (2024~ )</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 80px">양민혁</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 60px; color: rgb(0, 103, 172)"
+              >
+                토트넘 신입생
+                <sub style="font-size: 24px; color: hsl(0, 0%, 75%)"
+                  >(2025~)</sub
+                >
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li>강원 FC (2024)</li>
+                <li style="font-size: 27px; color: #000e55">
+                  토트넘 홋스퍼 FC (2025~ )
+                </li>
+              </ul>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_yangminhyeok.png"
+                alt="양민혁"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_jeongseaungwon.png"
+                alt="정승원"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 80px">정승원</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 60px; color: rgb(0, 103, 172)"
+              >
+                외모에 가려진 터프함
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li>대구 FC (2016~2021)</li>
+                <li>수원 삼성 블루윙즈 (2022~2023)</li>
+                <li>수원 FC (2024~ )</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 80px">조현우</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 50px; color: rgb(0, 103, 172)"
+              >
+                '카잔의 기적'의 주역
+              </p>
+              <br /><br />
+              <ul>
+                <li style="font-size: 20px">클럽 경력</li>
+                <br />
+                <li>대구 FC (2013~2019)</li>
+                <li>울산 HD FC (2020~ )</li>
+              </ul>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/player_johyeonwoo.png"
+                alt="조현우"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stadium" class="stadium">
+      <div class="container">
+        <div class="title">
+          <h4>Stadiums</h4>
+          <h2>경기장</h2>
+        </div>
+
+        <div class="club-me">
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_seoul.webp"
+                alt="서울월드컵경기장"
+                width="510px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 60px">서울월드컵경기장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 35px; color: rgb(0, 103, 172)"
+              >
+                한국에서 가장 큰 경기장
+              </p>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 60px">인천축구전용경기장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 50px; color: rgb(0, 103, 172)"
+              >
+                도심의 유람선
+              </p>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_incheon.jpg"
+                alt="인천축구전용경기장"
+                width="510px"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_soowon.webp"
+                alt="수원종합운동장"
+                width="510px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 65px">수원종합운동장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                캐슬 파크
+              </p>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 70px">강릉종합운동장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                눈보라 속 축구 열기
+              </p>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_gangwon.webp"
+                alt="강릉종합운동장"
+                width="510px"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_daejeon.jfif"
+                alt="대전월드컵경기장"
+                width="510px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 70px">대전월드컵경기장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                국내 최초의 반개폐 지붕
+              </p>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 65px">DGB대구은행파크</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                접근성도 좋은 "대팍"
+              </p>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_daegu.jpg"
+                alt="DGB대구은행파크"
+                width="510px"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_gimcheon.webp"
+                alt="김천종합스포츠타운"
+                width="510px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 60px">김천종합스포츠타운</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                김천을 대표하는 스포츠 시설
+              </p>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 65px">전주월드컵경기장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 50px; color: rgb(0, 103, 172)"
+              >
+                "전주성"
+              </p>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_jeonbuk.webp"
+                alt="전주월드컵경기장"
+                width="510px"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_gwangju.webp"
+                alt="광주축구전용구장"
+                width="510px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 65px">광주축구전용구장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                선수의 역량을 담기 조금은 아담
+              </p>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 60px">울산문수축구경기장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                리그 1위 다운 최고 수준 인프라
+              </p>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_ulsan.jpg"
+                alt="울산문수축구경기장"
+                width="510px"
+              />
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_pohang.webp"
+                alt="포항스틸야드"
+                width="510px"
+              />
+            </div>
+            <div class="player_right">
+              <p style="font-size: 70px">포항스틸야드</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                한국 최초의 축구전용구장
+              </p>
+            </div>
+          </div>
+
+          <div class="club-inner">
+            <div class="player_right">
+              <p style="font-size: 65px">제주월드컵경기장</p>
+              <br />
+              <p
+                class="tagline"
+                style="font-size: 40px; color: rgb(0, 103, 172)"
+              >
+                "세계에서 가장 아름다운 경기장"
+              </p>
+            </div>
+            <div class="player_left">
+              <img
+                class="player_img"
+                src="image/stadium_jeju.jpg"
+                alt="제주월드컵경기장"
+                width="510px"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 타이머 -->
+    <div class="timer">
+      <h1 style="font-size: 120px">정규 라운드 종료</h1>
+      <div id="countdown">
+        <span id="days">00</span> 일 <span id="hours">00</span> 시간
+        <span id="minutes">00</span> 분 <span id="seconds">00</span> 초
+      </div>
+    </div>
+    <br /><br />
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <a href="https://www.kleague.com/" target="_blank"
+              ><img src="image/Kleague_footer.png" alt="kleague" width="40px"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
